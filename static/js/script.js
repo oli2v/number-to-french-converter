@@ -12,8 +12,15 @@ async function translateNumbers() {
 
     if (response.ok) {
         const translatedNumbers = await response.json();
-        document.getElementById("result").innerText = translatedNumbers.join(', ');
+        const formattedOutput = translatedNumbers.map(num => `<div>${num}</div>`).join('');
+        document.getElementById("result").innerHTML = formattedOutput;
     } else {
         document.getElementById("result").innerText = 'Error: Unable to translate numbers.';
     }
 }
+
+document.getElementById("numberInput").addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        translateNumbers();
+    }
+});
