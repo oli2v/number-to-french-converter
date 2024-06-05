@@ -8,10 +8,10 @@ For example, given the list of integers `1,2,3`, the script should output `un, d
 
 ## Usage
 1. Install requirements:\
-`pip3 install -r requirements.txt`\
+`pip3 install -r requirements.txt`
 
 2. Launch the Flask app:\
-`python3 app.py`\
+`python3 app.py`
 
 3. Open the app on your web browser by going to the following url: `http://127.0.0.1:5000`
 
